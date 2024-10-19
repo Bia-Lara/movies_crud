@@ -1,0 +1,49 @@
+.home{
+    text-align: center;
+}
+
+.home h1{
+    font-size: 3rem;
+    border-bottom: 3px solid #ff5757;
+    display: inline-block; 
+    width: auto;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.card {
+    background-color: #343434;
+    display: inline-block; 
+    width: auto; 
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center; 
+    transition: 0.5s;
+}
+
+.card h5{
+    font-size: 1.2rem;
+    color:#ff5757 ;
+    margin: 15px;
+}
+
+.card span{
+    margin-top: 25px;
+}
+
+.card img {
+    width: 50%; 
+    max-width: 150px; 
+    height: auto;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
