@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.header {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 10px 20px; 
+    margin-top: 10px;
+
+}
+
+.logo{
+    font-family: "Archivo Black", sans-serif;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.logo img{
+    width: 5%;
+    margin: 0 15px;
+}
+
+  
+nav {
+    display: flex; 
+    justify-content: center; 
+    flex-grow: 1;
+}
+
+nav a {
+    margin: 0 15px; 
+    text-decoration: none; 
+    padding: 10px;
+    padding-bottom: 0;
+    transition: 0.2s;
+    
+}
+
+nav a:hover {
+    border-bottom: 3px solid #ff5757;
+}
