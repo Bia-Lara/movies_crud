@@ -1,0 +1,55 @@
+.card{
+    text-align: center;
+    background-color: #343434;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.5s;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.card p{
+    margin: 20px;
+}
+
+.card img {
+    width: 100%; 
+    max-width: 200px; 
+    height: auto;
+}
+
+.card .events{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.card .events button{
+    padding: 1.5em 4em;
+    background-color: #30ff06;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+    margin-right: 10px;
+}
+
+.card .events .link{
+    padding: 0.5em 2.3em;
+    background-color: #ff5757;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.card .events button:hover, .card .events .link:hover{
+    transform: scale(1.1);
+}

@@ -3,6 +3,7 @@ import Form from '../../components/Form/Form'
 import Alert from '../../components/Alert/Alert'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios';
+import style from './remove.module.css'
 
 function Remove() {
   const[movieData, setMovieData] = useState(null)
@@ -26,18 +27,21 @@ function Remove() {
 
   return (
     <div>
-        <Form onSubmit={handleMovieData}/>
+        <Form onSubmit={handleMovieData} page='Remover Filme'/>
 
         {movieData &&
           
-            <div>
+            <div className={style.card}>
+              <img src="/imgs/card.svg" alt="Card" />
               <p>Nome: {movieData.name}</p>
               <p>Gênero: {movieData.genre}</p>
               <p>Ano: {movieData.any}</p>
            
-
-              <button onClick={removeMovie}>Apagar</button> 
-              <Link to="/">Voltar</Link>
+              <div className={style.events}>
+                <button onClick={removeMovie}>Apagar</button> 
+                <Link className={style.link} to="/">Voltar</Link>
+              </div>
+              
             </div>
            
         }
