@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import Form from '../../components/Form/Form'
 import { Link, useNavigate} from 'react-router-dom'
 import axios from 'axios';
+import style from './update.module.css'
 
 function Update() {
 
@@ -25,25 +26,27 @@ function Update() {
 
   return (
     <div>
-        <Form onSubmit={handleMovieData}/>
+        <Form onSubmit={handleMovieData} page='Editar Filme'/>
 
         {movieData &&
-          <form onSubmit={updateMovie}>
+          <form onSubmit={updateMovie} className={style.formUpdate}>
             <label htmlFor="">Nome:</label><br />
             <input type="text" value={movieData.name} onChange={(e)=>setMovieData({...movieData, name:e.target.value})} /><br />
 
-            <label htmlFor="">Gênero::</label><br />
+            <label htmlFor="">Gênero:</label><br />
             <input type="text" value={movieData.genre} onChange={(e)=>setMovieData({...movieData, genre:e.target.value})}/><br />
 
             <label htmlFor="">Ano:</label><br />
             <input type="text" value={movieData.any} onChange={(e)=>setMovieData({...movieData, any:e.target.value})} /><br />
 
-            <button onClick={updateMovie}>Alterar</button> 
-            <Link to="/">Voltar</Link>
+            <div className={style.events}>
+              <button onClick={updateMovie}>Alterar</button> 
+              <Link className={style.link} to="/">Voltar</Link>
+            </div>
+            
           </form>
         }
 
-        
     </div>
   )
 }

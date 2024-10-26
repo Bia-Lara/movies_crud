@@ -1,0 +1,49 @@
+.formUpdate{
+    text-align: center;
+    padding: 50px;
+}
+
+.formUpdate label{
+    color: #fff;
+}
+
+.formUpdate input{
+    width: 20em;
+    padding: 1.5em 1em;
+    border-radius: 50px;
+}
+
+.formUpdate .events{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.formUpdate .events button{
+    padding: 1.5em 4em;
+    background-color: #30ff06;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+    margin-right: 10px;
+}
+
+.formUpdate .events .link{
+    padding: 1em 4em;
+    background-color: #ff5757;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.formUpdate .events button:hover, .formUpdate .events .link:hover{
+    transform: scale(1.1);
+}
