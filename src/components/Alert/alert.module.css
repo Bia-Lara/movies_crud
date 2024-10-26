@@ -1,0 +1,22 @@
+.alert{
+    background-color: rgba(255, 0, 0, 0.457);
+    color: #fff;
+    padding: 2em;
+    border-radius: 20px;
+    margin: 50px;
+}
+
+.alert p{
+    font-size: 2rem;
+}
+
+.alert .link{
+    padding: 1em 4em;
+    background-color: #ffca06;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
