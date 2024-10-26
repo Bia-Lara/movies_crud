@@ -6,7 +6,7 @@
     justify-content: space-between; 
     padding: 10px 20px; 
     margin-top: 10px;
-
+    color: #ffff;
 }
 
 .logo{
@@ -25,6 +25,7 @@ nav {
     display: flex; 
     justify-content: center; 
     flex-grow: 1;
+    
 }
 
 nav a {
@@ -33,7 +34,7 @@ nav a {
     padding: 10px;
     padding-bottom: 0;
     transition: 0.2s;
-    
+    color: #ffff;
 }
 
 nav a:hover {
