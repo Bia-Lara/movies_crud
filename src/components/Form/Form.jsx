@@ -2,8 +2,9 @@ import React, {useState, useEffect} from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import Alert from '../Alert/Alert'
+import style from './form.module.css'
 
-function Form({ onSubmit }) {
+function Form({ onSubmit, page }) {
 
     const[id, setId] = useState('')
     const[error, setError] = useState(false)
@@ -18,16 +19,23 @@ function Form({ onSubmit }) {
                 onSubmit(res.data)
                 setId('')
             })
-            .catch(err =>setError(err))
+            .catch(err =>{
+              onSubmit(null)
+              setError(err)
+            })
     }
 
   return (
-    <div>
+    <div className={style.divForm}>
+      <h1>{page}</h1>
         <form onSubmit={getMovieById}>
             <label htmlFor="movieId">Id:</label><br />
             <input type="number" value={id} onChange={(e)=>setId(e.target.value)} /><br />
-            <button onClick={getMovieById}>Procurar</button>
-            <Link to="/">Cancelar</Link>
+            <div className={style.events}>
+              <button onClick={getMovieById}>Procurar</button>
+              <Link className={style.link} to="/">Cancelar</Link>
+            </div>
+            
         </form>
 
         {error && <Alert message='ID não encontrado!'/>}

@@ -1,0 +1,64 @@
+.divForm{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.divForm h1{
+    margin: 20px;
+    border-bottom: 3px solid #ff5757;
+    width: auto;
+}
+
+.divForm  label{
+    text-align: left;
+    color: #fff;
+}
+
+.divForm form input{
+    outline: none;
+    padding: 0.3em 0.8em;
+    width: 10em;
+    border-radius: 50px;
+    color: #000;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.divForm .events{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.divForm form .events button{
+    padding: 1.5em 4em;
+    background-color: #ffca06;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+    margin-right: 10px;
+}
+
+.divForm form .events .link{
+    padding: 1em 4em;
+    background-color: #ff5757;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.divForm form .events button:hover, .divForm form .events .link:hover{
+    transform: scale(1.1);
+}
