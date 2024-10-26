@@ -1,0 +1,45 @@
+.read{
+    text-align: center;
+    color: #fff;
+}
+
+.read h1{
+    font-size: 3rem;
+    border-bottom: 3px solid #ff5757;
+    width: auto;
+    
+}
+
+.read .card{
+    background-color: #343434;
+    display: inline-block; 
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.5s;
+    font-size: 1.5rem;
+}
+
+.read .card span{
+    margin: 20px;
+}
+
+.read .card img {
+    width: 100%; 
+    max-width: 200px; 
+    height: auto;
+}
+
+.read .button{
+    
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #ff5757;
+    color: white;
+    padding: 10px 50px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}

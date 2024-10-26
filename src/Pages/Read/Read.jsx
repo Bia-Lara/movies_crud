@@ -1,7 +1,8 @@
 import React, {useState,useEffect} from 'react'
-import Form from '../../components/Form/Form'
-import { Link, useNavigate, useParams} from 'react-router-dom'
+import { Link, useParams} from 'react-router-dom'
 import axios from 'axios';
+import style from './read.module.css'
+
 
 function Read() {
 
@@ -16,17 +17,20 @@ function Read() {
   }, [])
 
   return (
-    <div>
-      <h2>Detalhes do Filme</h2>
+    <div className={style.read}>
+      <h1>Detalhes do Filme</h1>
 
-      <div>
+      <div className={style.card}>
+        <img src="/imgs/card.svg" alt="Card" />
         <p>Nome: {data.name}</p>
         <p>Gênero: {data.genre}</p>
         <p>Ano: {data.any}</p>
       </div>
       
-
-      <Link to='/'>Voltar</Link>
+      <div>
+        <Link to='/' className={style.button}>Voltar</Link>
+      </div>
+      
     </div>
   )
 }

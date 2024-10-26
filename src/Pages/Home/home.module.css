@@ -1,5 +1,6 @@
 .home{
     text-align: center;
+    
 }
 
 .home h1{
@@ -9,7 +10,7 @@
     width: auto;
 }
 
-.cards{
+.home .cards{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -17,7 +18,7 @@
     margin-top: 50px;
 }
 
-.card {
+.home .card {
     background-color: #343434;
     display: inline-block; 
     width: auto; 
@@ -28,22 +29,23 @@
     transition: 0.5s;
 }
 
-.card h5{
+.home .card h5{
     font-size: 1.2rem;
     color:#ff5757 ;
     margin: 15px;
 }
 
-.card span{
+.home .card span{
     margin-top: 25px;
+    color: #ffff;
 }
 
-.card img {
+.home .card img {
     width: 50%; 
     max-width: 150px; 
     height: auto;
 }
 
-.card:hover{
+.home .card:hover{
     transform: scale(1.1);
 }
