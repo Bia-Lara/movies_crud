@@ -53,3 +53,9 @@
 .card .events button:hover, .card .events .link:hover{
     transform: scale(1.1);
 }
+
+.removeAlert{
+    display: flex;
+    justify-content: center;
+    
+}

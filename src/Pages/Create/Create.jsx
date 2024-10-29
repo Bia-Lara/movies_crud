@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { Link, useNavigate} from 'react-router-dom'
 import axios from 'axios';
 import style from './create.module.css'
+import Alert from '../../components/Alert/Alert'
 
 function Create() {
 
@@ -10,15 +11,21 @@ function Create() {
     genre:'',
     any:''
   })
+  const[error, setError] = useState(false)
 
   const navigate = useNavigate();
 
   const createMovie = (e)=>{
     e.preventDefault()
-    
-    axios.post('https://6713eadf690bf212c760321c.mockapi.io/movies', values)
+    setError(false);
+    if(values.name!='' && values.genre!='' && values.any!=''){
+      axios.post('https://6713eadf690bf212c760321c.mockapi.io/movies', values)
       .then(res=>navigate('/'))
       .catch(err => console.log(err))
+    }else{
+      setError('Preencha todos os Campos!')
+    }
+    
   }
 
   return (
@@ -46,6 +53,9 @@ function Create() {
         </div>
         
       </form>
+
+
+      {error && <Alert message={error}/>}
     </div>
   )
 }

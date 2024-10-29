@@ -14,6 +14,7 @@ function Form({ onSubmit, page }) {
        e.preventDefault()
        setError(false)
        
+       if(id!=''){
         axios.get('https://6713eadf690bf212c760321c.mockapi.io/movies/'+id)
             .then(res=>{
                 onSubmit(res.data)
@@ -21,8 +22,14 @@ function Form({ onSubmit, page }) {
             })
             .catch(err =>{
               onSubmit(null)
-              setError(err)
+              setError('ID não encontrado!')
             })
+       }else{
+        setError('Por favor digite algum ID!')
+       }
+
+       
+        
     }
 
   return (
@@ -38,7 +45,7 @@ function Form({ onSubmit, page }) {
             
         </form>
 
-        {error && <Alert message='ID não encontrado!'/>}
+        {error && <Alert message={error}/>}
         
     </div>
   )

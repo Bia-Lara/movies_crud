@@ -26,10 +26,10 @@ function Remove() {
   }
 
   return (
-    <div>
+    <div className={style.remove}>
         <Form onSubmit={handleMovieData} page='Remover Filme'/>
 
-        {movieData &&
+        {movieData && !showAlert &&
           
             <div className={style.card}>
               <img src="/imgs/card.svg" alt="Card" />
@@ -46,7 +46,10 @@ function Remove() {
            
         }
 
-        {showAlert && <Alert message='Filme apagado com sucesso'/>}
+        <div className={style.removeAlert}>
+          {showAlert && <Alert message='Filme apagado com sucesso'/>}
+        </div>
+       
     </div>
   )
 }
